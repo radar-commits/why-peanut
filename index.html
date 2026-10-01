@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Why Peanut</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..600&display=swap">
+<style>
+  /* Layout: a single centred reading column, generous leading, each paragraph rising into place. */
+  :root {
+    --paper: #ffffff;
+    --ink: #111111;
+    --ink-soft: #5c5c5c;
+    --sans: "Manrope", "Avenir Next", "Segoe UI", system-ui, -apple-system, sans-serif;
+    --size: clamp(1.2rem, 1rem + 0.9vw, 1.5rem);
+    color-scheme: light;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: var(--size);
+    font-weight: 400;
+    line-height: 1.7;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    padding-inline: max(22px, env(safe-area-inset-left, 0px));
+    padding-block: 0;
+  }
+  ::selection { background: var(--ink); color: var(--paper); }
+
+  article {
+    max-width: 32em;
+    margin-inline: auto;
+    padding-block: clamp(5rem, 18vh, 11rem) clamp(6rem, 30vh, 16rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1.35em;
+  }
+
+  h1 {
+    margin: 0 0 1.4em;
+    font-weight: 300;
+    font-size: clamp(2.8rem, 1.8rem + 6vw, 5rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+  }
+
+  p { margin: 0; text-wrap: pretty; hanging-punctuation: first; }
+
+  /* The child's game: set in from the margin, spoken lines a touch heavier */
+  .exchange { display: flex; flex-direction: column; gap: 0.5em; padding-left: 1.2em; }
+  .exchange p { font-weight: 500; }
+  .exchange .who { font-weight: 400; color: var(--ink-soft); }
+
+  .pause {
+    text-align: center;
+    letter-spacing: 0.4em;
+    color: var(--ink-soft);
+  }
+
+  .last {
+    margin-top: 1.8em;
+    font-size: clamp(1.9rem, 1.3rem + 3vw, 3rem);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+  }
+
+  /* Rise-in: only hidden once JS confirms it can reveal things again */
+  .js .rise {
+    opacity: 0;
+    transform: translateY(1.6rem);
+    transition: opacity 1.1s cubic-bezier(.2,.65,.25,1), transform 1.1s cubic-bezier(.2,.65,.25,1);
+    will-change: opacity, transform;
+  }
+  .js .rise.in { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .js .rise { opacity: 1; transform: none; transition: none; }
+  }
+</style>
+</head>
+<body>
+<article>
+  <h1 class="rise">Why Peanut</h1>
+
+  <p class="rise">Not so long ago, mum overheard me calling you by our nickname. ‘Peanut’, ‘Panini’ among others. She asked, with laughter, “Why Peanut?”. It made me pause, I mean, the only real reason is because of the name before it, P-dot, and the only reason that name came to be was because, well, your name begins with P, and my favourite musician at the time shared a similar name. But, for a moment I couldn’t answer. I became so lost in such a complex thought that I couldn’t think of any single word, let alone a whole sentence that could paint a picture of the kind of mental time travel that could make such a thing possible. I answered in the end, after an eternity &ndash; perhaps only a second in the real world &ndash; “Why not?”. And, in a way, that was the most concise answer: Why not?</p>
+
+  <p class="rise">I often find myself asking why. Those who ask why are praised, as if it is a unique talent. The inquisitive do well in school, they make grand discoveries. Though to me, it seems to be the easiest thing to do in the world. It’s something we are born with, for whatever reason humans do not know anything, yet we so desperately want to. Sometimes, asking why is a constructive thing, but mostly, it seems to be a game.</p>
+
+  <p class="rise">We have all encountered this game, it shows quite obviously when talking to a child, they ask you about something.</p>
+
+  <div class="exchange">
+    <p class="rise">“Why is the ocean blue?” <span class="who">you may respond:</span></p>
+    <p class="rise">“Well, it’s actually clear, but the water’s surface is reflective, so the blue colour you are seeing is actually the sky’s reflection.”</p>
+    <p class="rise"><span class="who">They come back with,</span> “Why is the sky blue?”</p>
+    <p class="rise"><span class="who">You might say,</span> “The sun sends all the colours down to us in its light. When that light hits the air around the Earth, the blue colour bounces around much more than the other colours, painting the sky blue for us to see!”</p>
+  </div>
+
+  <p class="rise pause">…</p>
+  <p class="rise pause" style="letter-spacing:0">“Why?”</p>
+
+  <p class="rise">The game goes on forever and ever. There are reasons for things, and reasons for those reasons. Its a game, sure, but there is no winner &ndash; because it never ends. Ask why enough and eventually you reach an “I don’t know”, someone else might know, but eventually, they won’t.</p>
+
+  <p class="rise">Why am I saying all of this? Well, ironically, there is actually an answer. When you spend enough time asking why, you start to notice another question hiding behind it, a quieter, thankless one. Why not?</p>
+
+  <p class="rise">“Why” pulls you backwards. It digs and digs, through reason after reason, until you hit the floor and still find nothing there. “Why not” faces the other way. It doesn’t ask you to justify anything. It asks only whether there’s anything stopping you, and most of the time there isn’t. There’s a freedom in that I didn’t understand until I said it out loud. “Why” is a locked door you keep knocking on. “Why not” is realising the door was never locked.</p>
+
+  <p class="rise">The world is full of whys. A million of them, maybe more: why the ocean, why the sky, why the sun, why anything at all. And the why nots, the real ones, the reasons something shouldn’t be, are far fewer, and they’re usually smaller than we make them. Fear, timing, doubt. Most of them fall apart the moment you look at them properly.</p>
+
+  <p class="rise">And if I’m honest, I didn’t learn that on my own. You taught me. Before you, I was all why. I’d turn things over and over looking for a reason good enough to let me do them, and usually I’d find a reason not to instead. Then you came along and did things simply because nothing was stopping you. You’d say yes to the spontaneous plan, try the thing I’d have talked myself out of. Somewhere along the way it rubbed off on me.</p>
+
+  <p class="rise">I tried the why game on you, I tried it all the way to the end, and for the first time in my life I didn’t reach an “I don’t know”.</p>
+
+  <p class="rise">Why do I love you? Because of how you see the world, because of who I am when I’m with you. And why is that? Because you’re you. And why are you you? Because you are. That’s it. That’s the bottom of it. For the first time, the game doesn’t end because I’ve run out of answers. It ends because there’s no question left to ask. You’re the only person I’ve ever asked why about and found the last answer. Not an “I don’t know”, not a shrug, just a full stop. You. Everything else in my life is still a question. My love for you is the one thing that was answered the moment I knew I felt it. It didn’t arrive as a mystery to be solved. It arrived already complete, like something that had always been true and was just waiting for me to notice.</p>
+
+  <p class="rise">So there are a million whys out there, and I’ll probably spend my whole life chasing them. But for you there’s only one why, and I’ve already found it. And as for the why nots, there aren’t any. There never were. Some things are a choice, and some things are inevitable, and us was always the second kind.</p>
+
+  <p class="rise">So when mum asked “Why Peanut?”, maybe I said the truest thing I could have. Not because there was no reason, but because there was nothing in the world that could ever be a reason not to.</p>
+
+  <p class="rise last">Why Peanut? Well, Why not.</p>
+</article>
+
+<script>
+  (function () {
+    if (!('IntersectionObserver' in window)) return;
+    var root = document.documentElement;
+    var items = document.querySelectorAll('.rise');
+    root.classList.add('js');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+    items.forEach(function (el) {
+      // Anything already on screen at load rises in right away, with a gentle stagger
+      var r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight * 0.92) {
+        var i = Array.prototype.indexOf.call(items, el);
+        setTimeout(function () { el.classList.add('in'); }, 120 + i * 180);
+      } else {
+        io.observe(el);
+      }
+    });
+  })();
+</script>
+</body>
+</html>
